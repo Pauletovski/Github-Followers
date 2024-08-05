@@ -1,14 +1,14 @@
 //
-//  PLButton.swift
+//  PLBodyLabel.swift
 //  GitHubFollowers
 //
-//  Created by Paulo Lazarini on 29/07/24.
+//  Created by Paulo Lazarini on 30/07/24.
 //
 
 import UIKit
 
-class PLButton: UIButton {
-
+class PLBodyLabel: UILabel {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -19,20 +19,20 @@ class PLButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backgroundColor: UIColor, title: String) {
+    init(textAlignment: NSTextAlignment) {
         super.init(frame: .zero)
-        
-        self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal)
+        self.textAlignment = textAlignment
         
         configure()
     }
     
     private func configure() {
-        layer.cornerRadius = 10
-        titleLabel?.textColor = .white
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        textColor = .secondaryLabel
+        font = UIFont.preferredFont(forTextStyle: .body)
+        adjustsFontSizeToFitWidth = true
+        minimumScaleFactor = 0.75
+        lineBreakMode = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }
+
