@@ -14,3 +14,9 @@ extension Optional<String> {
         return !self.isEmpty
     }
 }
+
+extension String {
+    var isNotEmpty: Bool {
+        return !self.isEmpty
+    }
+}
