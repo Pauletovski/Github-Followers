@@ -26,9 +26,9 @@ extension User {
         User(
             login: "Pauletovski",
             avatarUrl: "https://avatars.githubusercontent.com/u/98775396?v=4",
-            name: nil,
-            location: nil,
-            bio: nil,
+            name: "Paulo G. Lazarini",
+            location: "Joinville, Brazil",
+            bio: "iOS Developer || SwiftUI || UIKit",
             publicRepos: 4,
             publicGists: 0,
             followers: 2,
