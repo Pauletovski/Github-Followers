@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E09DAB282C629C9C00D6602E /* PLUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09DAB272C629C9C00D6602E /* PLUserHeaderView.swift */; };
+		E09DAB2A2C62C9B200D6602E /* PLUserInfoContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09DAB292C62C9B200D6602E /* PLUserInfoContainerViewController.swift */; };
+		E09DAB2C2C62C9CF00D6602E /* PLUserInfoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09DAB2B2C62C9CF00D6602E /* PLUserInfoItemView.swift */; };
 		E0F089E52C5866580018E008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F089E42C5866580018E008 /* AppDelegate.swift */; };
 		E0F089E72C5866580018E008 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F089E62C5866580018E008 /* SceneDelegate.swift */; };
 		E0F089EE2C58665A0018E008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F089ED2C58665A0018E008 /* Assets.xcassets */; };
@@ -29,9 +32,14 @@
 		E0F08A282C5BF3E70018E008 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F08A272C5BF3E70018E008 /* FollowerCell.swift */; };
 		E0F08A2A2C5BF46E0018E008 /* PLAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F08A292C5BF46E0018E008 /* PLAvatarImageView.swift */; };
 		E0F08A2C2C5C9D030018E008 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F08A2B2C5C9D030018E008 /* UIHelper.swift */; };
+		E0F08A302C61CAF10018E008 /* PLEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F08A2F2C61CAF10018E008 /* PLEmptyStateView.swift */; };
+		E0F08A342C61E4800018E008 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F08A332C61E4800018E008 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E09DAB272C629C9C00D6602E /* PLUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUserHeaderView.swift; sourceTree = "<group>"; };
+		E09DAB292C62C9B200D6602E /* PLUserInfoContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUserInfoContainerViewController.swift; sourceTree = "<group>"; };
+		E09DAB2B2C62C9CF00D6602E /* PLUserInfoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLUserInfoItemView.swift; sourceTree = "<group>"; };
 		E0F089E12C5866580018E008 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F089E42C5866580018E008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F089E62C5866580018E008 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +64,8 @@
 		E0F08A272C5BF3E70018E008 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		E0F08A292C5BF46E0018E008 /* PLAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAvatarImageView.swift; sourceTree = "<group>"; };
 		E0F08A2B2C5C9D030018E008 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		E0F08A2F2C61CAF10018E008 /* PLEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLEmptyStateView.swift; sourceTree = "<group>"; };
+		E0F08A332C61E4800018E008 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 				E0F089F82C586C320018E008 /* SearchViewController.swift */,
 				E0F089FA2C586C830018E008 /* FavoritesListViewController.swift */,
 				E0F08A022C589F150018E008 /* FollowersListViewController.swift */,
+				E0F08A332C61E4800018E008 /* UserInfoViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -122,13 +133,13 @@
 		E0F08A142C5939CD0018E008 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E0F08A2E2C61CA710018E008 /* ImageViews */,
 				E0F08A262C5BF3CA0018E008 /* Cells */,
 				E0F08A1A2C593AFE0018E008 /* ViewControllers */,
 				E0F08A182C593A190018E008 /* TextFields */,
 				E0F08A172C5939E60018E008 /* Views */,
 				E0F08A162C5939E00018E008 /* Buttons */,
 				E0F08A152C5939D80018E008 /* Labels */,
-				E0F08A292C5BF46E0018E008 /* PLAvatarImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -154,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				E0F08A112C5939310018E008 /* PLAlertContainerView.swift */,
+				E0F08A2F2C61CAF10018E008 /* PLEmptyStateView.swift */,
+				E09DAB272C629C9C00D6602E /* PLUserHeaderView.swift */,
+				E09DAB2B2C62C9CF00D6602E /* PLUserInfoItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				E0F08A0D2C592E6B0018E008 /* PLAlertViewController.swift */,
+				E09DAB292C62C9B200D6602E /* PLUserInfoContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -217,6 +232,14 @@
 				E0F08A272C5BF3E70018E008 /* FollowerCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E0F08A2E2C61CA710018E008 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				E0F08A292C5BF46E0018E008 /* PLAvatarImageView.swift */,
+			);
+			path = ImageViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,19 +315,24 @@
 				E0F089FF2C5870F60018E008 /* PLButton.swift in Sources */,
 				E0F08A252C5BDF280018E008 /* ErrorMessage.swift in Sources */,
 				E0F08A1D2C5962410018E008 /* Follower.swift in Sources */,
+				E09DAB2C2C62C9CF00D6602E /* PLUserInfoItemView.swift in Sources */,
 				E0F08A2C2C5C9D030018E008 /* UIHelper.swift in Sources */,
 				E0F089E52C5866580018E008 /* AppDelegate.swift in Sources */,
+				E0F08A342C61E4800018E008 /* UserInfoViewController.swift in Sources */,
 				E0F08A2A2C5BF46E0018E008 /* PLAvatarImageView.swift in Sources */,
 				E0F089F92C586C320018E008 /* SearchViewController.swift in Sources */,
 				E0F08A222C5AF66B0018E008 /* NetworkManager.swift in Sources */,
+				E0F08A302C61CAF10018E008 /* PLEmptyStateView.swift in Sources */,
 				E0F08A032C589F150018E008 /* FollowersListViewController.swift in Sources */,
 				E0F08A0E2C592E6B0018E008 /* PLAlertViewController.swift in Sources */,
 				E0F08A102C5934430018E008 /* UIViewController+extensions.swift in Sources */,
+				E09DAB282C629C9C00D6602E /* PLUserHeaderView.swift in Sources */,
 				E0F08A0C2C592DB20018E008 /* PLBodyLabel.swift in Sources */,
 				E0F08A1F2C5AF0FB0018E008 /* User.swift in Sources */,
 				E0F08A282C5BF3E70018E008 /* FollowerCell.swift in Sources */,
 				E0F08A062C58A1ED0018E008 /* String+extensions.swift in Sources */,
 				E0F089FB2C586C830018E008 /* FavoritesListViewController.swift in Sources */,
+				E09DAB2A2C62C9B200D6602E /* PLUserInfoContainerViewController.swift in Sources */,
 				E0F089E72C5866580018E008 /* SceneDelegate.swift in Sources */,
 				E0F08A012C5874420018E008 /* PLTextField.swift in Sources */,
 				E0F08A0A2C592C850018E008 /* PLTitleLabel.swift in Sources */,
