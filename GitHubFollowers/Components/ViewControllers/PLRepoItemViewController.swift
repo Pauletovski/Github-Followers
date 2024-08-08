@@ -1,16 +1,16 @@
 //
-//  PLUserInfoContainerViewController.swift
+//  PLRepoItemViewController.swift
 //  GitHubFollowers
 //
-//  Created by Paulo Lazarini on 06/08/24.
+//  Created by Paulo Lazarini on 08/08/24.
 //
 
 import UIKit
 
-final class PLUserInfoContainerViewController: UIViewController {
+final class PLRepoItemViewController: UIViewController {
     
-    let publicReposView = PLUserInfoItemView()
-    let publicGistView = PLUserInfoItemView()
+    let firstView = PLUserInfoItemView()
+    let secondView = PLUserInfoItemView()
     
     private lazy var stackView: UIStackView = {
         let stack = UIStackView()
@@ -27,6 +27,20 @@ final class PLUserInfoContainerViewController: UIViewController {
         return button
     }()
     
+    private var user: User!
+    
+    init(user: User) {
+        super.init(nibName: nil, bundle: nil)
+        self.user = user
+        
+        configurePrimaryItemView(sfSymbolName: "folder", title: "Public Repost", counter: user.publicRepos)
+        configureSecondaryItemView(sfSymbolName: "text.justify.left", title: "Public Gists", counter: user.publicGists)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,8 +49,8 @@ final class PLUserInfoContainerViewController: UIViewController {
         view.layer.cornerRadius = 16
         
         view.addSubview(stackView)
-        stackView.addArrangedSubview(publicReposView)
-        stackView.addArrangedSubview(publicGistView)
+        stackView.addArrangedSubview(firstView)
+        stackView.addArrangedSubview(secondView)
         view.addSubview(button)
         
         NSLayoutConstraint.activate([
@@ -47,22 +61,19 @@ final class PLUserInfoContainerViewController: UIViewController {
             button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            button.heightAnchor.constraint(equalToConstant: 50),
-            
-            view.heightAnchor.constraint(greaterThanOrEqualToConstant: 150)
+            button.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
-    func configureButton(backgroundColor: UIColor, title: String) {
-        button.backgroundColor = backgroundColor
-        button.setTitle(title, for: .normal)
-    }
-    
     func configurePrimaryItemView(sfSymbolName: String, title: String, counter: Int) {
-        publicReposView.configureData(sfSymbolName: sfSymbolName, title: title, counter: counter)
+        firstView.configureData(sfSymbolName: sfSymbolName, title: title, counter: counter)
     }
     
     func configureSecondaryItemView(sfSymbolName: String, title: String, counter: Int) {
-        publicGistView.configureData(sfSymbolName: sfSymbolName, title: title, counter: counter)
+        secondView.configureData(sfSymbolName: sfSymbolName, title: title, counter: counter)
     }
+}
+
+#Preview {
+    PLRepoItemViewController(user: .mock())
 }

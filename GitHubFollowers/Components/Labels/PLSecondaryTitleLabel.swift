@@ -1,14 +1,13 @@
 //
-//  PLTitleLabel.swift
+//  PLSecondaryTitleLabel.swift
 //  GitHubFollowers
 //
-//  Created by Paulo Lazarini on 30/07/24.
+//  Created by Paulo Lazarini on 07/08/24.
 //
 
 import UIKit
 
-final class PLTitleLabel: UILabel {
-    
+class PLSecondaryTitleLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -19,19 +18,19 @@ final class PLTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+    init(fontSize: CGFloat) {
         super.init(frame: .zero)
-        self.textAlignment = textAlignment
-        self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
+        font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
         
         configure()
     }
     
     private func configure() {
-        textColor = .label
+        textColor = .secondaryLabel
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
+

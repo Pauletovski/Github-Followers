@@ -28,7 +28,7 @@ extension User {
             avatarUrl: "https://avatars.githubusercontent.com/u/98775396?v=4",
             name: "Paulo G. Lazarini",
             location: "Joinville, Brazil",
-            bio: "iOS Developer || SwiftUI || UIKit",
+            bio: "iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit || iOS Developer || SwiftUI || UIKit",
             publicRepos: 4,
             publicGists: 0,
             followers: 2,
